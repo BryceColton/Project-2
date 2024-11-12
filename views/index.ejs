@@ -1,12 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
-</head>
-<body>
-    <h1>Welcome to the Home Page!</h1>
-    <p>Please <a href="/logIn">log in</a> to continue.</p>
-</body>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="icon" href="../images/favicon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- Menu Bar -->
+    <nav class="menu-bar">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#featured-arrangements">Featured Arrangements</a></li>
+        <li><a href="/logIn" class="login-link">Log In</a></li>
+      </ul>
+    </nav>
+
+    <!-- Banner Section -->
+    <header class="banner">
+      <img src="../images/logo.png" alt="Company Logo" class="logo" />
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <img src="../images/heather.png" width="500px" height="auto" />
+      <p>
+        I'm Heather! I love flowers and find joy in making your events come to life with my
+        arrangements. Fill out the form below to get in contact with me!
+      </p>
+    </section>
+    <!-- Contact Form Section -->
+    <section class="contact-form">
+      <h2>Get in Touch</h2>
+      <form action="/submit-form" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </section>
+
+    <!-- Featured Arrangements Section -->
+    <section id="featured-arrangements" class="featured-arrangements">
+      <h2>Featured Arrangements</h2>
+      <div class="arrangements-grid">
+        <div class="arrangement-card">
+          <img src="../images/FallBouquet.png" alt="Fall Bouquet" class="arrangement-image" />
+          <h3 class="arrangement-name">Fall Bouquet</h3>
+          <p class="arrangement-price">$49.99</p>
+          <p class="arrangement-description">
+            A beautiful mix of fall flowers to brighten up any room.
+          </p>
+          <button class="btn">Shop Now</button>
+        </div>
+        <div class="arrangement-card">
+          <img
+            src="../images/valentines.png"
+            alt="Valentine's Arrangement"
+            class="arrangement-image"
+          />
+          <h3 class="arrangement-name">Valentine's Arrangement</h3>
+          <p class="arrangement-price">$59.99</p>
+          <p class="arrangement-description">
+            A romantic mix of red and pink blooms perfect for Valentine's Day.
+          </p>
+          <button class="btn">Shop Now</button>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
